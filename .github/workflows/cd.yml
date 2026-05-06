@@ -1,7 +1,7 @@
 name: Deploy to PyPi
 on:  
   release:     
-    types: [created]  
+    types: [published]  
 jobs:  
   upload:  
     environment:
@@ -24,6 +24,7 @@ jobs:
       - name: "Build distributions"
         run: |
           uv build
+          uv tool run twine check dist/*
           
       - name: "Publish package distributions to PyPI"
         uses: pypa/gh-action-pypi-publish@release/v1
