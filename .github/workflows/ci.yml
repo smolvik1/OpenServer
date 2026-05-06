@@ -33,6 +33,7 @@ jobs:
           uv tool run twine check dist/*
           
       - name: "Publish package distributions to PyPI Test"
+        if: github.event_name != 'pull_request'
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
