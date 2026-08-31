@@ -1,8 +1,9 @@
 [project]
 name = "openserver"
-version = "1.153"
+version = "1.154"
 description = "Petroleum Experts OpenServer calculations"
-authors = [{ name = "Stian Molvik", email = "stimo@equinor.com" }]
+authors = [{ name = "Thorjan Knudsvik" }, { name = "Stian Molvik" }]
+maintainers = [{ name = "So Gunnerød" }]
 license = { text = "GNU GPL" }
 readme = "README.md"
 requires-python = ">=3.9,<3.14"
